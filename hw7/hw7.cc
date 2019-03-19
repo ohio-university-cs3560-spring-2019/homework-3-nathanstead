@@ -13,9 +13,11 @@ double stddev(int n, ...){
     va_list args;
     va_start(args, n);  // Receiving how many arguments there will be
     int nums[n];
+    int sum = 0;
     for (int i = 0; i < n; i++) {
     	int in = va_arg(args, int);
-      nums[i]  = in;  // Putting the numbers into the array
+      nums[i] = in;  // Putting the numbers into the array
+      sum += in;
     }
 
     double mean = sum / n;
